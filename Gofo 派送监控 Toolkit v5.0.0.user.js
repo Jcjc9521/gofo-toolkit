@@ -1345,16 +1345,36 @@ const AWARD_EMOJI_FOR_DSP_PERFORMANCE = ["🏆", "🥈", "🥉"];
           ctx.font = "28px Arial";
         }
 
-        let textColor = "#000000";
+//        let textColor = "#000000";
 
-        if (!isTotal && colIndex === 1 && Number(row.outOfDelivery) > 0) {
-          textColor = "#ff0000";
-        }
+//        if (!isTotal && colIndex === 1 && Number(row.outOfDelivery) > 0) {
+//          textColor = "#ff0000";
+//        }
 
-        if (!isTotal && colIndex === 2 && Number(row.deliveryFail) >= 30) {
+//        if (!isTotal && colIndex === 2 && Number(row.deliveryFail) >= 30) {
+//          textColor = "#ff0000";
+//      }
+          let textColor = "#000000";
+
+          // 非总计行才进行颜色判断
+          if (!isTotal) {
+
+          // out of delivery > 10 红色
+          if (colIndex === 1 && Number(row.outOfDelivery) > 10) {
           textColor = "#ff0000";
+          }
+
+          // delivery fail > 30 红色
+          if (colIndex === 2 && Number(row.deliveryFail) > 30) {
+          textColor = "#ff0000";
+          }
+
+          // 2400 < 97 红色
+          if (colIndex === 3 && Number(row.rate2400) < 97) {
+          textColor = "#ff0000";
+          }
       }
-
+        
       ctx.fillStyle = textColor;
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
