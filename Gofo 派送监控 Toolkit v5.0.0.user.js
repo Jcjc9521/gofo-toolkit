@@ -14,8 +14,6 @@
 // @grant        GM_setValue
 // @grant        GM_getValue
 // @connect      *
-// @downloadURL https://update.greasyfork.org/scripts/566024/Gofo%20%E6%B4%BE%E9%80%81%E7%9B%91%E6%8E%A7%20Toolkit%20v400.user.js
-// @updateURL https://update.greasyfork.org/scripts/566024/Gofo%20%E6%B4%BE%E9%80%81%E7%9B%91%E6%8E%A7%20Toolkit%20v400.meta.js
 // ==/UserScript==
 // @run-at document-start
 
