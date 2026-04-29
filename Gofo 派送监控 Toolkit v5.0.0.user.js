@@ -1289,7 +1289,7 @@ const AWARD_EMOJI_FOR_DSP_PERFORMANCE = ["🏆", "🥈", "🥉"];
     const ctx = canvas.getContext("2d");
     ctx.scale(scale, scale);
 
-    const headers = ["DSP", "out of delivery", "delivery fail", "2400", "Rank"];
+    const headers = ["DSP", "Out of delivery", "Delivery fail", "2400", "Rank"];
 
     ctx.fillStyle = "#ffffff";
     ctx.fillRect(0, 0, tableW, tableH);
